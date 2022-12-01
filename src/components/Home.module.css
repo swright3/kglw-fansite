@@ -1,0 +1,47 @@
+.splash {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+ 
+.leftDoor {
+    height: 100%;
+    width: 50%;
+    background-image: url('../assets/nonagoninfinity_1.png');
+    background-position: right;
+    perspective: 500px;
+}
+
+.rightDoor {
+    height: 100%;
+    width: 50%;
+    background-image: url('../assets/nonagoninfinity_2.png');
+    background-position: left;
+}
+
+.leftDoorOpen {
+    transform: rotateY(-90deg);
+    perspective: 500px;
+    transform-origin: left;
+    transition: transform;
+    transition-duration: 1500ms;
+    transition-timing-function: ease-out;
+}
+
+.rightDoorOpen {
+    transform: rotateY(90deg) perspective(10000px);
+    transform-origin: right; 
+    transition: transform;
+    transition-duration: 1500ms;
+    transition-timing-function: ease-out;
+}
+
+.splashGone {
+    display: none;
+}
+
