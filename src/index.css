@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'roberta-regular';
+    src: url('../assets/roberta.ttf') format('opentype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +13,6 @@ img  {
     display: block;
 }
 
-html {
+html, body {
     min-height: 100%;
 }

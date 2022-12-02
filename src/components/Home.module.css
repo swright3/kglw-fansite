@@ -1,25 +1,39 @@
+@font-face {
+    font-family: 'roberta-regular';
+    src: url('../assets/roberta.ttf') format('opentype');
+}
+
+.gone {
+    display: none;
+}
+
 .splash {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.leftDoor {
     position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
     bottom: 0;
-    background-color: red;
-    display: flex;
-    align-items: center;
-}
- 
-.leftDoor {
-    height: 100%;
-    width: 50%;
+    left: 0;
+    right: 50%;
     background-image: url('../assets/nonagoninfinity_1.png');
     background-position: right;
     perspective: 500px;
 }
 
 .rightDoor {
-    height: 100%;
-    width: 50%;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    left: 50%;
+    right: 0;
     background-image: url('../assets/nonagoninfinity_2.png');
     background-position: left;
 }
@@ -41,7 +55,22 @@
     transition-timing-function: ease-out;
 }
 
-.splashGone {
-    display: none;
+.openBtn {
+    background-color: red;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: roberta-regular, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.5em;
+    border-color: black;
 }
 
+.fadeIn {
+    opacity: 1;
+    transition: all 2s;
+}
