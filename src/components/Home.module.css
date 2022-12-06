@@ -18,6 +18,7 @@
 }
 
 .leftDoor {
+    z-index: 1;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -29,6 +30,7 @@
 }
 
 .rightDoor {
+    z-index: 1;
     position: fixed;
     top: 0; 
     bottom: 0;
@@ -57,7 +59,7 @@
 
 .openBtn {
     background-color: red;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -73,4 +75,40 @@
 .fadeIn {
     opacity: 1;
     transition: all 2s;
+    color: red;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.header {
+    margin: 0 auto;
+    border: 2px solid black;
+    max-width: 60rem;
+    text-align: center;
+    height: 10rem;
+    background-image: url('../assets/king-gizzard--the-lizard-wizard-5ac6222ba5359.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #1a2a1d;
+}
+
+.menuContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.menuItem {
+    display: flex;
+    font-family: roberta-regular, sans-serif;
+    border-block: 2px solid black;
+    border-left: 1rem solid #51b84d;
+    height: 10rem;
+    align-items: center;
+    background-color: #1a2a1d;
+    padding: 1rem;
 }
