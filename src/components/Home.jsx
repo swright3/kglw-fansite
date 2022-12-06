@@ -14,7 +14,7 @@ function Home({id}) {
             <div className={`${styles.rightDoor} ${doors==='open' ? styles.rightDoorOpen : ''}`}></div>
             <button onClick={toggleDoors} className={`${styles.openBtn} ${doors==='open' ? styles.gone : ''}`}>Open the door!</button>
             
-            <section className={`${styles.fadeIn} ${doors==='open' ? '' : styles.invisible}`} >
+            <section className={`${styles.mainMenu} ${styles.fadeIn} ${doors==='open' ? '' : styles.invisible}`} >
                 <header className={styles.header}>
                 </header>
                 <div className={styles.menuContainer}>

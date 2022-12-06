@@ -75,24 +75,28 @@
 .fadeIn {
     opacity: 1;
     transition: all 2s;
-    color: red;
 }
 
 .invisible {
     opacity: 0;
 }
 
+.mainMenu {
+    margin: 1rem;
+}
+
 .header {
     margin: 0 auto;
-    border: 2px solid black;
     max-width: 60rem;
     text-align: center;
-    height: 10rem;
+    height: 15rem;
     background-image: url('../assets/king-gizzard--the-lizard-wizard-5ac6222ba5359.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #1a2a1d;
+    border: 4px solid #51b84d;
+    border-bottom: none;
 }
 
 .menuContainer {
@@ -100,15 +104,26 @@
     grid-template-columns: 100%;
     max-width: 60rem;
     margin: 0 auto;
+    border: 4px solid #51b84d;
+    background-color: #51b84d;
+    gap: 2px;
 }
 
 .menuItem {
     display: flex;
     font-family: roberta-regular, sans-serif;
-    border-block: 2px solid black;
-    border-left: 1rem solid #51b84d;
-    height: 10rem;
+    font-size: 2.5rem;
+    border-left: 0px solid #1a2a1d;
+    height: 4em;
     align-items: center;
     background-color: #1a2a1d;
     padding: 1rem;
+    color: #51b84d;
+    transition: all 0.3s ease-out;
+}
+
+.menuItem:hover {
+    color: #1a2a1d;
+    border-left: 2rem solid #1a2a1d;
+    background-color: #51b84d;
 }

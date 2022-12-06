@@ -16,3 +16,8 @@ img  {
 html, body {
     min-height: 100%;
 }
+
+html {
+    background-image: url('./assets/textless.png');
+    background-position: bottom;
+}
