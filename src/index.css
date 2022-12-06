@@ -20,4 +20,5 @@ html, body {
 html {
     background-image: url('./assets/textless.png');
     background-position: bottom;
+    background-size: cover;
 }
