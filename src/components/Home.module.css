@@ -3,6 +3,9 @@
     src: url('../assets/roberta.ttf') format('opentype');
 }
 
+@value variables: '../variables.css';
+@value DARK-GREEN, LIGHT-GREEN, DARK-GREEN-TRANSPARENT from variables;
+
 .gone {
     display: none;
 }
@@ -95,13 +98,13 @@
     margin: 0 auto;
     max-width: 60rem;
     text-align: center;
-    height: 15rem;
+    height: clamp(10rem, 40vw, 15rem);
     background-image: url('../assets/king-gizzard--the-lizard-wizard-5ac6222ba5359.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #1a2a1d8a;
-    border: 4px solid #51b84d;
+    background-color: DARK-GREEN-TRANSPARENT;
+    border: 4px solid LIGHT-GREEN;
     border-bottom: none;
 }
 
@@ -110,8 +113,8 @@
     grid-template-columns: 100%;
     max-width: 60rem;
     margin: 0 auto;
-    border: 4px solid #51b84d;
-    background-color: #51b84d;
+    border: 4px solid LIGHT-GREEN;
+    background-color: LIGHT-GREEN;
     gap: 2px;
 }
 
@@ -119,18 +122,19 @@
     display: flex;
     font-family: roberta-regular, sans-serif;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
-    border-inline: 0px solid #1a2a1d;
+    border-inline: 0px solid DARK-GREEN;
     height: 4em;
     justify-content: center;
     align-items: center;
-    background-color: #1a2a1d;
+    background-color: DARK-GREEN;
     padding: 1rem;
-    color: #51b84d;
+    color: LIGHT-GREEN;
     transition: all 0.3s ease-out;
+    text-decoration: none;
 }
 
 .menuItem:hover, .menuItem:active {
     color: #1a2a1d;
-    border-inline: 2rem solid #1a2a1d;
-    background-color: #51b84d;
+    border-inline: 2rem solid DARK-GREEN;
+    background-color: LIGHT-GREEN;
 }

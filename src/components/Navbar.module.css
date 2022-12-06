@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'roberta-regular';
+    src: url('../assets/roberta.ttf') format('opentype');
+}
+
+@value variables: '../variables.css';
+@value DARK-GREEN, LIGHT-GREEN, DARK-GREEN-TRANSPARENT from variables;
+
+.Navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: DARK-GREEN-TRANSPARENT;
+    border: 4px solid LIGHT-GREEN;
+    color: LIGHT-GREEN;
+    font-family: roberta-regular, sans-serif;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.logo {
+    width: clamp(8rem, 20vw, 14rem);
+    height: auto;
+}
+
+.navlinkList {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1em
+}
+
+.navlink, .navlink:visited {
+    text-decoration: none;
+    color: LIGHT-GREEN;
+    
+}
+
+.navlink::after {
+    width: 10px;
+    height: 10px;
+    border: 2px solid red;
+    background-color: LIGHT-GREEN;
+}
+
+.navlink:focus, .navlink:hover {
+    border-bottom: 2px solid LIGHT-GREEN;
+}
