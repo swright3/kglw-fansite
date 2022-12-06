@@ -72,6 +72,12 @@
     border-color: black;
 }
 
+.openBtn:hover{
+    background-color: #030201;
+    color: red;
+    border-color: red;
+}
+
 .fadeIn {
     opacity: 1;
     transition: all 2s;
@@ -113,8 +119,9 @@
     display: flex;
     font-family: roberta-regular, sans-serif;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
-    border-left: 0px solid #1a2a1d;
+    border-inline: 0px solid #1a2a1d;
     height: 4em;
+    justify-content: center;
     align-items: center;
     background-color: #1a2a1d;
     padding: 1rem;
@@ -122,8 +129,8 @@
     transition: all 0.3s ease-out;
 }
 
-.menuItem:hover {
+.menuItem:hover, .menuItem:active {
     color: #1a2a1d;
-    border-left: 2rem solid #1a2a1d;
+    border-inline: 2rem solid #1a2a1d;
     background-color: #51b84d;
 }
