@@ -29,7 +29,7 @@
     right: 50%;
     background-image: url('../assets/nonagoninfinity_1.png');
     background-position: right;
-    perspective: 500px;
+    transform-origin: left;
 }
 
 .rightDoor {
@@ -41,23 +41,7 @@
     right: 0;
     background-image: url('../assets/nonagoninfinity_2.png');
     background-position: left;
-}
-
-.leftDoorOpen {
-    transform: rotateY(-90deg);
-    perspective: 500px;
-    transform-origin: left;
-    transition: transform;
-    transition-duration: 1500ms;
-    transition-timing-function: ease-out;
-}
-
-.rightDoorOpen {
-    transform: rotateY(90deg) perspective(10000px);
-    transform-origin: right; 
-    transition: transform;
-    transition-duration: 1500ms;
-    transition-timing-function: ease-out;
+    transform-origin: right;
 }
 
 .openBtn {

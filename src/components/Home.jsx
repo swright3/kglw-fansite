@@ -5,21 +5,29 @@ import Helmet from 'react-helmet';
 import { motion } from 'framer-motion'
 
 function Home({firstLoad, afterFirstLoad}) {
-    const [doors, setDoors] = useState('closed');
+    const [doorsOpen, setDoorsOpen] = useState(false);
 
     function toggleDoors() {
-        setDoors(prevDoors => prevDoors==='open' ? 'closed' : 'open');
+        setDoorsOpen(prevDoors => !prevDoors);
     }
-
-    const menuStyles = `${styles.mainMenu} ${styles.fadeIn} ${doors==='open' ? '' : styles.invisible}`
 
     return ( 
         <div className={styles.Home}>
-            <div className={`${styles.leftDoor} ${doors==='open' ? styles.leftDoorOpen : ''}`}></div>
-            <div className={`${styles.rightDoor} ${doors==='open' ? styles.rightDoorOpen : ''}`}></div>
-            <button onClick={toggleDoors} className={`${styles.openBtn} ${doors==='open' ? styles.gone : ''}`}>Open the door!</button>
+            <motion.div 
+                className={styles.leftDoor}
+                style={{originX: 0}}
+                animate={doorsOpen && {rotateY: -90}}
+                transition={{duration: 1.5}}
+            />
+            <motion.div 
+                className={styles.rightDoor}
+                style={{originX: '100%'}}
+                animate={doorsOpen && {rotateY: 90}}
+                transition={{duration: 1.5}}
+            />
+            <button onClick={toggleDoors} className={!doorsOpen ? styles.openBtn : styles.gone}>Open the door!</button>
             
-            <section className={`${styles.mainMenu} ${styles.fadeIn} ${doors==='open' ? styles.visible : ''}`} >
+            <section className={`${styles.mainMenu} ${styles.fadeIn} ${doorsOpen ? styles.visible : ''}`} >
                 <header className={styles.header}>
                 </header>
                 <div className={styles.menuContainer}>
