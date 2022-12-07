@@ -2,6 +2,7 @@ import react, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 import Helmet from 'react-helmet';
+import { motion } from 'framer-motion'
 
 function Home({firstLoad, afterFirstLoad}) {
     const [doors, setDoors] = useState('closed');
@@ -14,7 +15,6 @@ function Home({firstLoad, afterFirstLoad}) {
 
     return ( 
         <div className={styles.Home}>
-            {}
             <div className={`${styles.leftDoor} ${doors==='open' ? styles.leftDoorOpen : ''}`}></div>
             <div className={`${styles.rightDoor} ${doors==='open' ? styles.rightDoorOpen : ''}`}></div>
             <button onClick={toggleDoors} className={`${styles.openBtn} ${doors==='open' ? styles.gone : ''}`}>Open the door!</button>

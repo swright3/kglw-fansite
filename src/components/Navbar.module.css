@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: DARK-GREEN-TRANSPARENT;
     border: 4px solid LIGHT-GREEN;
     color: LIGHT-GREEN;
@@ -21,7 +21,7 @@
 }
 
 .logo {
-    width: clamp(8rem, 20vw, 14rem);
+    width: clamp(10rem, 20vw, 16rem);
     height: auto;
 }
 
