@@ -65,20 +65,8 @@
     border-color: red;
 }
 
-.fadeIn {
-    
-}
-
-
-
 .mainMenu {
     margin: 1rem;
-    opacity: 0;
-    transition: all 2s;
-}
-
-.visible {
-    opacity: 1;
 }
 
 .header {
