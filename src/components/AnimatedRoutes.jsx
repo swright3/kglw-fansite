@@ -13,7 +13,7 @@ function AnimatedRoutes() {
     }
 
     return ( 
-        <AnimatePresence>
+        <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
                 <Route path='/' element={<Home doorsOpen={doorsOpen} toggleDoors={toggleDoors}/>} />
                 <Route path='/tierlist' element={<Tierlist />} />

@@ -5,16 +5,28 @@ import Helmet from 'react-helmet';
 import { motion } from 'framer-motion'
 
 function Home({doorsOpen, toggleDoors}) {
+    const [fadeDuration, setFadeDuration] = useState(0.3)
 
-    const Motionlink = motion(Link)
+    const Motionlink = motion(Link);
+
     const motionlinkStyles = {
         color: '#1a2a1d',
         borderInlineWidth: '2rem',
         backgroundColor: '#51b84d'
-    }
+    };
+
+    const variableDuration = {
+        duration: fadeDuration
+    };
 
     return ( 
-        <div className={styles.Home}>
+        <motion.div 
+        className={styles.Home}
+        initial={{opacity: 1}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+        transition={{duration: 0.3}}
+        >
             <motion.div 
                 className={styles.leftDoor}
                 style={{originX: 0}}
@@ -29,13 +41,16 @@ function Home({doorsOpen, toggleDoors}) {
                 animate={doorsOpen && {rotateY: 90}}
                 transition={{duration: 1.5}}
             />
-            <button onClick={toggleDoors} className={!doorsOpen ? styles.openBtn : styles.gone}>Open the door!</button>
+            <button onClick={() => {
+                setFadeDuration(1.5)
+                toggleDoors()
+            }} className={!doorsOpen ? styles.openBtn : styles.gone}>Open the door!</button>
             
             <motion.section 
                 className={styles.mainMenu}
                 initial={{opacity: 0}}
                 animate={doorsOpen ? {opacity: 1} : {opacity: 0}}
-                transition={{duration: 1.5}}
+                transition={variableDuration}
             >
                 <header className={styles.header}>
                 </header>
@@ -69,7 +84,7 @@ function Home({doorsOpen, toggleDoors}) {
                     </Motionlink>
                 </div>
             </motion.section>
-        </div>
+        </motion.div>
     );
 }
 
