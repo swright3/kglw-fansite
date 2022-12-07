@@ -104,12 +104,6 @@
     background-color: DARK-GREEN;
     padding: 1rem;
     color: LIGHT-GREEN;
-    transition: all 0.3s ease-out;
+    /* transition: all 0.3s ease-out; */
     text-decoration: none;
-}
-
-.menuItem:hover, .menuItem:active {
-    color: #1a2a1d;
-    border-inline: 2rem solid DARK-GREEN;
-    background-color: LIGHT-GREEN;
 }

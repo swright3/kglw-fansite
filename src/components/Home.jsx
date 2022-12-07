@@ -6,6 +6,13 @@ import { motion } from 'framer-motion'
 
 function Home({doorsOpen, toggleDoors}) {
 
+    const Motionlink = motion(Link)
+    const motionlinkStyles = {
+        color: '#1a2a1d',
+        borderInlineWidth: '2rem',
+        backgroundColor: '#51b84d'
+    }
+
     return ( 
         <div className={styles.Home}>
             <motion.div 
@@ -33,15 +40,33 @@ function Home({doorsOpen, toggleDoors}) {
                 <header className={styles.header}>
                 </header>
                 <div className={styles.menuContainer}>
-                    <Link to='/tierlist' className={styles.menuItem}>
+                    <Motionlink
+                        to='/tierlist' 
+                        className={styles.menuItem}
+                        whileHover={motionlinkStyles}
+                        whileFocus={motionlinkStyles}
+                        transition={{duration: 0.3}}
+                    >
                         <h2 className={styles.itemTitle}>Tier List</h2>
-                    </Link>
-                    <Link to='/discography' className={styles.menuItem}>
+                    </Motionlink>
+                    <Motionlink
+                        to='/discography' 
+                        className={styles.menuItem}
+                        whileHover={motionlinkStyles}
+                        whileFocus={motionlinkStyles}
+                        transition={{duration: 0.3}}
+                    >
                         <h2 className={styles.itemTitle}>Discography</h2>
-                    </Link>
-                    <Link to='/socials' className={styles.menuItem}>
+                    </Motionlink>
+                    <Motionlink 
+                        to='/socials' 
+                        className={styles.menuItem}
+                        whileHover={motionlinkStyles}
+                        whileFocus={motionlinkStyles}
+                        transition={{duration: 0.3}}
+                    >
                         <h2 className={styles.itemTitle}>Socials</h2>
-                    </Link>
+                    </Motionlink>
                 </div>
             </motion.section>
         </div>
