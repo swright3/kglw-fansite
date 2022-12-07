@@ -25,6 +25,12 @@
     height: auto;
 }
 
+.logo::after {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
 .navlinkList {
     display: flex;
     flex-flow: row nowrap;
@@ -35,16 +41,11 @@
 .navlink, .navlink:visited {
     text-decoration: none;
     color: LIGHT-GREEN;
-    
-}
-
-.navlink::after {
-    width: 10px;
-    height: 10px;
-    border: 2px solid red;
-    background-color: LIGHT-GREEN;
+    border-bottom-width: 1rem;
+    transition: border 70ms linear;
+    border-bottom: 0px solid;
 }
 
 .navlink:focus, .navlink:hover {
-    border-bottom: 2px solid LIGHT-GREEN;
+    border-bottom: 3px solid LIGHT-GREEN;
 }
