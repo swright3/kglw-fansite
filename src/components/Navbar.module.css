@@ -43,9 +43,9 @@
     color: LIGHT-GREEN;
     border-bottom-width: 1rem;
     transition: border 70ms linear;
-    border-bottom: 0px solid;
+    border-bottom: 0px solid LIGHT-GREEN;
 }
 
 .navlink:focus, .navlink:hover {
-    border-bottom: 3px solid LIGHT-GREEN;
+    border-bottom-width: 3px
 }

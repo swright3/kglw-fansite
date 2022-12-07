@@ -6,6 +6,11 @@ import styles from './App.module.css';
 
 
 function App() {
+  const [doorsOpen, setDoorsOpen] = useState(false);
+
+  function toggleDoors() {
+      setDoorsOpen(prevDoors => !prevDoors);
+  }
 
   return (
     <BrowserRouter>
